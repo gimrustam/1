@@ -1,0 +1,57 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled17.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNGtyN7Jf6CYLQu+72PE4x5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gimrustam/1/blob/main/colab%20nohup\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iY6Wa4JxbVU1"
+      },
+      "source": [
+        "!nvidia-smi"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1yNB00i6bbQI"
+      },
+      "source": [
+        "!sudo apt update\n",
+        "!sudo add-apt-repository --yes ppa:ethereum/ethereum\n",
+        "!sudo apt update\n",
+        "!sudo apt install ethereum\n",
+        "!wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz\n",
+        "!tar -xvf ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz\n",
+        "!nohup bin/ethminer -G -P stratum1+tcp://0x6A9488c415098383dC69420790347B407abCC748.rig1@us1.ethermine.org:4444 &"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
